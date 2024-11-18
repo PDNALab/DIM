@@ -16,3 +16,7 @@ The `dim` library makes extensive use of `numpy` and `sklearn` and `graphtime`.
 - graphtime
 
 ### Usage
+1. Clone the repository:
+'''
+git clone https://github.com/PDNALab/DIM.git
+'''
