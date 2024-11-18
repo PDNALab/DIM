@@ -20,3 +20,35 @@ The `dim` library makes extensive use of `numpy` and `sklearn` and `graphtime`.
 ```
 git clone https://github.com/PDNALab/DIM.git 
 ```
+
+2. Append path: Befor importing DIM module, please append the path as shown.
+```
+import sys
+sys.path.append('<path to dim>')
+
+from dim import utils
+from dim import dimgen as dim 
+```
+
+3. Main functions:
+- Make dim object for arbitary DNA sequence. [sequence is given 5'-3']
+```
+# Load DMRF object - pre learned from ABC data
+with open('<path to dim>/dim/gen_data/dmrf_tetramer_20_4.dmrf', 'rb') as f:
+    dmrf = pickle.load(f)
+
+# Make dim object
+DNA = dim.dim(seq='ATGCATGC', dmrf=dmrf)
+```
+- Free energy
+```
+# For smaller DNA sequences:
+Free_energy1 = DNA.get_free_energy1()
+
+# When DNA sequences have more sub-systems [faster method]:
+Free_energy2 = get_free_energy2(cut=10)
+```
+- Transition matrix
+```
+T_mat = DNA.get_transition_matrix()
+```
