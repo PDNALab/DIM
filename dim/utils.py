@@ -1,6 +1,6 @@
 import numpy as np
 import itertools
-from joblib import Parallel, delayed
+# from joblib import Parallel, delayed
 
 def complementary(seq:str):
     '''
