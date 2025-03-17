@@ -14,7 +14,7 @@ The `dim` was trained extensively using `sklearn` and `graphtime`.
 ### Usage
 1. Create conda environment
 ```
-conda create -n <my-env> python=3.10
+conda create -n <my-env> python==3.10
 conda activate <my-env>
 ```
 
